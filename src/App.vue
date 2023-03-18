@@ -9,9 +9,9 @@
     <p class="b">
      <Buttons></Buttons>
     </p>
-   
+    <p class="t"><Timer></Timer></p>
   </div>
-  <Timer></Timer>
+  
 </template>
 
 
@@ -29,7 +29,10 @@ h1{
   transform: translate(-50%, -50%);
   
 }
-.container{
-  background-color: aquamarine;
+.t{
+  position:absolute;
+  top: 90%;
+  left: 5%;
+  
 }
 </style>

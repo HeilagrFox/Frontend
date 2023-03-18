@@ -1,16 +1,15 @@
 
 <script setup>
- import { reactive,ref } from 'vue';
-const letter=ref(0);
- function Onclick(event){
-    letter.value++;
-  
- }
+ import {ref } from 'vue';
+const number=ref(0);
+
 </script>
 <template>
     <div>
-     <button @click="Onclick"> <b>Hey, click me!</b></button>
-     <p>Button is clicked {{ letter }} time(s). </p>
+     <p><b>The number: {{ number}} . </b> </p>
+     <button @click="number++"> <b>Hey, click me for +1!</b></button>
+
+     <button @click="number--"> <b>Hey, click me for -1!</b></button>
     </div>
 </template>
 
@@ -31,7 +30,7 @@ const letter=ref(0);
   transition: background-color 0.3s ease;
  }
  button:hover{
-    background-color: rgb(33, 11, 35);
+    color: red;
  }
  
 </style>
