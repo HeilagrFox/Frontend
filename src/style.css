@@ -1,0 +1,31 @@
+body{
+    margin:0;
+    min-height:100vh;
+    display:grid;
+    place-content: center;
+    background: #c7b8cb;
+}
+.inp{
+    border-style:solid;
+    border-color: white;
+    padding:3% 0 3% 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,1);
+}
+.card{
+    transition: 1.4s;
+    cursor: pointer;
+    min-height: 5vh;
+    font-size: 25px;
+    border-radius: 15px;
+    padding:1% 0 0 10%;
+    border-color: black;
+    border-style: double;
+    background-color: rgb(186, 81, 123);
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,1);
+  }
+  .card:hover{
+    background-color: rgb(79, 33, 51);
+    color:white;
+    transform:scale(1.1)
+  }

@@ -1,38 +1,33 @@
 <script setup>
-  import Buttons from "./Components/Buttons.vue";
-  import Timer from "./Components/Timer.vue";
+   import {ref} from 'vue';
+const text=ref("");
+const cards = ref({
+    card1:'Russia',
+    card2:'USA',
+    card3:'German',
+    card4:'South Korea',
+    card5:'China',
+    card6:'Japan',
+    card6:'France'
+})
 </script>
 
-<template>
-  <div class="container">
-    <h1>Welcome!</h1>
-    <p class="b">
-     <Buttons></Buttons>
-    </p>
-    <p class="t"><Timer></Timer></p>
-  </div>
+<template> 
+<div>
+  <h1><u><i>Cards</i></u></h1>
+<input v-model="text" placeholder="Write here" class="inp">
+<div v-for="card in cards"
+ :key = "card.id" >
+  <p v-if="card.toLowerCase().includes(text.toLowerCase())" class="card"> {{ card }}</p>
+</div> 
+ 
+</div>
   
+   
+   
 </template>
-
 
 
 <style scoped>
 
-  
-h1{
-  text-align: center;
-}
-.b{
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-.t{
-  position:absolute;
-  top: 90%;
-  left: 5%;
-  
-}
 </style>
